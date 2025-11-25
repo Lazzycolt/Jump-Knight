@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkp17gdtvjc4u"]
+
+[ext_resource type="Script" uid="uid://q1s0gagiqv84" path="res://Scripts/Personaje.gd" id="1_qg4o5"]
+[ext_resource type="Texture2D" uid="uid://dg8prkhqcf36c" path="res://Assets/idle/1x/frame0000.png" id="2_0gco6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gco6"]
+size = Vector2(40, 66)
+
+[node name="Personaje" type="Area2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_qg4o5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -3.333334)
+shape = SubResource("RectangleShape2D_0gco6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_0gco6")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

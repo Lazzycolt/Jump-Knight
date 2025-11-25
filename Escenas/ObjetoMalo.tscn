@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://6twqwn5ksvow"]
+
+[ext_resource type="PackedScene" uid="uid://b16pxam57cn1v" path="res://Escenas/Objeto.tscn" id="1_8mx57"]
+[ext_resource type="Script" uid="uid://dnapid0c8cqp1" path="res://Scripts/ObjetoMalo.gd" id="2_lxabc"]
+[ext_resource type="Texture2D" uid="uid://cwvlxlkva72rp" path="res://Assets/skull.png" id="3_lxabc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lxabc"]
+radius = 263.04752
+
+[node name="ObjetoMalo" instance=ExtResource("1_8mx57")]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_lxabc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_lxabc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_lxabc")

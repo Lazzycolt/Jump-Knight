@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://yuo5rhdwrcyo"]
+
+[ext_resource type="Script" uid="uid://dsu5tes25lqal" path="res://Scripts/Main.gd" id="1_sem21"]
+[ext_resource type="PackedScene" uid="uid://bkp17gdtvjc4u" path="res://Escenas/Personaje.tscn" id="2_j5xpj"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_sem21")
+
+[node name="Personaje" parent="." instance=ExtResource("2_j5xpj")]
+position = Vector2(543, 465)
+
+[node name="PosicionGeneracion" type="Marker2D" parent="."]
+position = Vector2(534, 288)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ContadorPuntos" type="Label" parent="CanvasLayer"]
+offset_left = 285.0
+offset_top = 404.0
+offset_right = 357.0
+offset_bottom = 427.0
+text = "Puntos: 0"
